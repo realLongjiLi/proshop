@@ -14,7 +14,7 @@ const orderSchema = mongoose.Schema({
             price: { type: Number, required: true },
             product: { 
                 type: mongoose.Schema.Types.ObjectId, 
-                equired: true,
+                required: true,
                 ref: 'Product' }
         }
     ],
@@ -29,10 +29,10 @@ const orderSchema = mongoose.Schema({
         required: true,
     },
     paymentResult: {
-        id: { type: string },
-        status: { type: string },
-        update_time: { type: string },
-        email_address: { type: string },
+        id: { type: String },
+        status: { type: String },
+        update_time: { type: String },
+        email_address: { type: String },
     },
     taxPrice: {
         type: Number,
