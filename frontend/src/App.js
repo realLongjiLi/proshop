@@ -15,6 +15,7 @@ const App = () => {
         <Container>
           <Route path='/' component={HomeScreen} exact></Route>
           <Route path='/product/:id' component={ProductScreen}></Route>
+          {/* make the id for cart optional */}
           <Route path='/cart/:id?' component={CartScreen}></Route>
         </Container>
       </main>
