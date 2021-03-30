@@ -10,6 +10,7 @@ import LoginScreen from './screens/LoginScreen'
 import RegisterScreen from './screens/RegisterScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import ShippingScreen from './screens/ShippingScreen'
+import PaymentScreen from './screens/PaymentScreen'
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           {/* make the id for cart optional */}
           <Route path='/cart/:id?' component={CartScreen}></Route>
           <Route path='/shipping' component={ShippingScreen}></Route>
+          <Route path='/payment' component={PaymentScreen}></Route>
         </Container>
       </main>
       <Footer></Footer>
