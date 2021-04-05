@@ -13,13 +13,14 @@ const PaymentScreen = ({ history }) => {
     history.push('/shipping')
   }
 
+  // default payment method is PayPal
   const [paymentMethod, setPaymentMethod] = useState('PayPal')
 
   const dispatch = useDispatch()
 
   const submitHandler = (e) => {
     e.preventDefault()
-    dispatch(savePaymentMethod({ paymentMethod }))
+    dispatch(savePaymentMethod(paymentMethod))
     history.push('/placeorder')
   }
 
