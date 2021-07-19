@@ -1,6 +1,7 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import path from 'path'
+import morgan from 'morgan'
 import connectDB from './config/db.js'
 import productRoutes from './routes/productRoutes.js'
 import userRoutes from './routes/userRoutes.js'
@@ -32,6 +33,7 @@ if (process.env.NODE_ENV === 'production') {
     res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
   )
 } else {
+  app.use(morgan('dev'))
   app.get('/', (req, res) => {
     res.send('API is running...')
   })
